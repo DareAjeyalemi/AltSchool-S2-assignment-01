@@ -11,16 +11,22 @@ const assignment = {};
  *
  * If you did Challenge - 1, remove the comment in the line just after this function
  *
+ * 
  * @param {Number} destination is the stopping number
  * @returns number the sum of the numbers from 1 to destination
  */
 function sumOfNumbersTo(destination) {
     let sum = 0;
+    //  logic
+    for (let i = 1; i <= destination; i++) {
+        sum += i
+    }
     return sum
 }
+assignment.sumOfNumbersTo = sumOfNumbersTo;
+// Function calling
+console.log(sumOfNumbersTo(10));
 
-
-// assignment.sumOfNumbersTo = sumOfNumbersTo;
 
 /**
  * Challenge - 2
@@ -38,7 +44,15 @@ function countEvenNumbersWithin(destination) {
     let sum = 0;
     let count = 0;
     let arrayOfEvenNumbers = [];
-
+// Logic
+    for (let i = 1; i <= destination; i++) {
+        if (i % 2 === 0) {
+            sum += i;
+            arrayOfEvenNumbers.push(i);
+            count++;
+        }   
+    }
+    
     return {
         // property value shorthand
         // when the property name and the value name are the same
@@ -48,8 +62,11 @@ function countEvenNumbersWithin(destination) {
         arrayOfEvenNumbers
     };
 }
+assignment.countEvenNumbersWithin = countEvenNumbersWithin;
+//Function calling
+console.log(countEvenNumbersWithin(10));
 
-// assignment.countEvenNumbersWithin = countEvenNumbersWithin;
+
 
 /**
  * Challenge - 3
